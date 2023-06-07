@@ -8,4 +8,6 @@ Repositório destinado ao Trabalho Prático da Disciplina de Engenharia de Softw
     - yarn
     - yarn add react-router-dom
     - yarn add react-icons
-  - Por fim, executar o comando "yarn dev" e abri no navegador a porta localhost indicado no terminal
+  - Para executar o projeto, realize o seguinte comando no terminal:
+    - yarn dev
+  - Por fim, abra no navegador a porta localhost indicada no terminal
