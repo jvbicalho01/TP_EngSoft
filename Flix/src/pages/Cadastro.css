@@ -1,0 +1,45 @@
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.cadastro h1 {
+  font-size: 40px;
+}
+
+.cadastro_inputs {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 20px;
+}
+
+.cadastro label {
+  margin-bottom: 4px;
+}
+
+.cadastro button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 320px;
+  background-color: #0080ff;
+  color: white;
+}
+
+.cadastro button:hover {
+  color: black;
+  background-color: white;
+}
+
+.cadastro p {
+  width: 280px;
+}
+
+.cadastro p a {
+  text-decoration: underline;
+}
