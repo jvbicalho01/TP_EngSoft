@@ -2,16 +2,18 @@
   color: white;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  margin: 2rem auto;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  align-items: center;
 }
 
-.movie-page svg {
+.movie-page .movie-card svg {
   font-size: 1.5rem;
   color: #f7d354;
 }
 
 .movie-page .movie-card {
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -32,28 +34,69 @@
   gap: .4rem;
 }
 
+.movie-page .full-info svg{
+  color: #f7d354;
+}
+
 .tagline{
   text-align: center;
   font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
+.full-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.info{
+.full-info .info{
   margin-bottom: 1.5rem;
 }
 
-.info h3{
+.full-info .info h3{
+  text-align: center;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: .5rem;
 }
 
-.info-description{
-  padding-bottom: 10rem;
+.full-info .info-description{
+  margin-bottom: 1.5rem;
 }
 
-.info-description p{
+.full-info .description{
   line-height: 1.4rem;
+  width: 40%;
+}
+
+.movie-page .play-btn{
+  display: flex;
+  background-color: #f7d354;
+  border: 2px solid #f7d354;
+  border-radius: 4px;
+  color: black;
+  /* padding: 3rem; */
+  align-items: center;
+  transition: .4s;
+  text-align: center;
+  font-weight: bold;
+  width: 12rem;
+  height: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+
+.movie-page .play-btn p{
+  margin-left: 3.3rem;
+}
+
+/* .movie-page .play-btn svg{
+  color: black;
+} */
+
+.movie-page .play-btn:hover{
+  background-color: transparent;
+  color: #f7d354;
 }
