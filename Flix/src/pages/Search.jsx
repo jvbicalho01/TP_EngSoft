@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 
 import MovieCard from "../components/MovieCard"
+import Navbar from "../components/Navbar"
 
 import "./MoviesGrid.css"
 
@@ -29,6 +30,7 @@ const Search = () => {
 
   return (
     <div className='container'>
+      <Navbar/>
       <h2 className='title'>
         Resultados para: <span className="query-text">{query}</span>
       </h2>
