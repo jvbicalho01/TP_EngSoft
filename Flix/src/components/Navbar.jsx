@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav id='navbar'>
       <h2>
-        <Link to="/"><BiCameraMovie /> Flix</Link>
+        <Link to="/home"><BiCameraMovie /> Flix</Link>
       </h2>
       <form onSubmit={handleSubmit}>
         <input
