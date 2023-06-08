@@ -19,13 +19,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' exact element={<Login />}/>
-        <Route path='/cadastro' element={<Cadastro />}/>
+        <Route path='/' exact element={<Login />} />
+        <Route path='/cadastro' element={<Cadastro />} />
+        <Route path='/movie/video/:id' element={<Video />} />
         <Route element={<App />}>
-          <Route path='/home' element={<Home />}/>
-          <Route path='/movie/:id' element={<Movie />}/>
-          <Route path='/movie/video/:id' element={<Video />}/>
-          <Route path='/search' element={<Search />}/>
+          <Route path='/home' element={<Home />} />
+          <Route path='/movie/:id' element={<Movie />} />
+          <Route path='/search' element={<Search />} />
         </Route>
       </Routes>
     </BrowserRouter>
