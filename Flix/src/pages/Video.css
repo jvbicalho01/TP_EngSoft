@@ -1,12 +1,21 @@
 .video-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
   color: gray;
 }
 
 .video-container .icons{
+  position: relative;
   display: flex;
-  margin-top: 35%;
-  margin-left: 42%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 35%; */
+  /* margin-left: 42%; */
+  width: 100%;
 }
 
 .video-container .icons h1{
@@ -15,6 +24,7 @@
 
 .video-container .movie-title{
   display: flex;
+  flex: 1;
 }
 
 .video-container .movie-title .title{
@@ -32,10 +42,12 @@
 }
 
 .video-container .icons .other-icons{
+  position: absolute;
+  right: 0;
   display: flex;
   justify-content: space-between;
   width: 8%;
-  margin-left: 78%;
+  /* margin-left: 78%; */
 }
 
 .video-container .timeline{

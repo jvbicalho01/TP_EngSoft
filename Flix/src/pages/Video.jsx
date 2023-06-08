@@ -59,9 +59,9 @@ const Video = () => {
   }, [id])
 
   return (
-    <div className="video-container">
+    <div>
       {movie && (
-        <>
+        <div className="video-container">
           <div className="movie-title">
             <h1 className="arrow-title" onClick={returnPage}><IoIosArrowBack /></h1>
             <h1 className="title">{movie.title}</h1>
@@ -78,12 +78,7 @@ const Video = () => {
               <h1><RiFullscreenFill /></h1>
             </div>
           </div>
-          <div className="timeline">
-            <hr />
-            {/* <p>{hours}:{minutes}:00</p> */}
-            <p>{movie.runtime}</p>
-          </div>
-        </>
+        </div>
       )}
 
     </div>
