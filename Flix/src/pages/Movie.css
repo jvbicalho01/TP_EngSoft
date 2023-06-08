@@ -73,6 +73,9 @@
 
 .movie-page .play-btn{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: #f7d354;
   border: 2px solid #f7d354;
   border-radius: 4px;

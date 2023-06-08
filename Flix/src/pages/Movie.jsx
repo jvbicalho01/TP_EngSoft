@@ -77,10 +77,7 @@ const Movie = () => {
             <p className="description">{movie.overview}</p>
           </div>
           <Link className="play-btn" to={`/movie/video/${movie.id}`}>
-            <p>
               <FaPlay /> Assistir
-            </p>
-
           </Link>
         </>
       )}
