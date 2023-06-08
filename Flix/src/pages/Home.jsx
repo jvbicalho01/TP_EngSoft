@@ -28,7 +28,6 @@ const Home = () => {
   return (
     
     <div className='container'>
-      <Navbar/>
       <h2 className='title'>Melhores Filmes</h2>
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}
