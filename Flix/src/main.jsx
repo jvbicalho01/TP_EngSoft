@@ -11,8 +11,6 @@ import Login from './pages/Login.jsx'
 import Cadastro from './pages/Cadastro.jsx'
 import Video from './pages/Video.jsx'
 
-
-
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

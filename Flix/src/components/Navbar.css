@@ -41,3 +41,7 @@
   background-color: transparent;
   color: #f7d354;
 }
+
+#logoutBtn {
+  width: 10%;
+}

@@ -1,25 +1,52 @@
-import './Cadastro.css'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../firebase'
 
-function Cadastro() {
+import './Cadastro.css'
+
+const Cadastro = () => {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const onSubmit = async (event) => {
+    event.preventDefault()
+    
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user
+        navigate("/")
+        alert("Conta criada!")
+        console.log(user)
+      })
+      .catch((error) => {
+        const errorCode = error.code
+        const errorMessage = error.message
+        console.log(errorCode, errorMessage)
+        alert(errorCode, errorMessage)
+      })
+  }
+
   return (
     <main>
       <div className="cadastro">
         <h1>Bem vindo(a) ao Flix</h1>
         <div className="cadastro_inputs">
-          <div>
-            <label htmlFor="">Como podemos chamar você?</label>
-            <input type="text" name="" id="" placeholder='ex: Neymar, Marcia, Einstein' />
-          </div>
-          <div>
-            <label htmlFor="">Definir uma senha</label>
-            <input type="text" name="" id="" placeholder='Nova senha' />
-          </div>
+          <form>
+            <div>
+              <label htmlFor="endereco-email">Qual seu email?</label>
+              <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required placeholder='ex: fulano@abc.com' />
+            </div>
+            <div>
+              <label htmlFor="senha">Defina uma senha:</label>
+              <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required placeholder='Nova senha' />
+            </div>
+          </form>
         </div>
-        <Link to='/'><button>Cadastrar</button></Link>
+        <button type="submit" onClick={onSubmit}>Cadastrar</button>
         <p>Se não pretende criar uma nova conta, você pode <Link to='/'>fazer login com outro e-mail.</Link></p>
       </div>
-
     </main>
   )
 }

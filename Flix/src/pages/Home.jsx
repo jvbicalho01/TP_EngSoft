@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 
 import MovieCard from '../components/MovieCard'
 import Navbar from '../components/Navbar'
@@ -11,7 +11,7 @@ const apiKey = import.meta.env.VITE_API_KEY
 const Home = () => {
 
   const [topMovies, setTopMovies] = useState([])
-
+  
   const getTopRatedMovies = async (url) => {
     const res = await fetch(url)
     const data = await res.json()
@@ -25,8 +25,7 @@ const Home = () => {
     getTopRatedMovies(topRatedUrl)
   }, [])
 
-  return (
-    
+  return ( 
     <div className='container'>
       <h2 className='title'>Melhores Filmes</h2>
       <div className="movies-container">
