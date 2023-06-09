@@ -36,22 +36,22 @@ const Navbar = () => {
 }
 
   return (
-    <nav id='navbar'>
+    <nav className='navbar'>
       <h2>
         <Link to="/home"><BiCameraMovie /> Flix</Link>
       </h2>
-      <button onClick={handleLogout} id='logoutBtn'>Logout</button>
       <form onSubmit={handleSubmit}>
+        <button type='submit'>
+          <BiSearchAlt2 />
+        </button>
         <input
           type="text"
           placeholder='Busque um filme'
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
-        <button type='submit'>
-          <BiSearchAlt2 />
-        </button>
       </form>
+      <button onClick={handleLogout} id='logoutBtn'>Logout</button>
     </nav>
   )
 }

@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.cadastro form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .cadastro h1 {
   font-size: 40px;
 }

@@ -51,14 +51,14 @@ const Login = () => {
         <hr />
         <div className="login_inputs">
           <form>
-          <div>
-            <label htmlFor="endereco-email">Email</label>
-            <input type="email" id="email" required placeholder='Insira seu endereço de email' onChange={(e)=>setEmail(e.target.value)}/>
-          </div>
-          <div>
-            <label htmlFor="senha">Senha</label>
-            <input type="password" id="senha" required placeholder='Insira sua senha' onChange={(e)=>setPassword(e.target.value)}/>
-          </div>
+            <div>
+              <label htmlFor="endereco-email">Email</label>
+              <input type="email" id="email" required placeholder='Insira seu endereço de email' onChange={(e)=>setEmail(e.target.value)}/>
+            </div>
+            <div>
+              <label htmlFor="senha">Senha</label>
+              <input type="password" id="senha" required placeholder='Insira sua senha' onChange={(e)=>setPassword(e.target.value)}/>
+            </div>
           </form>
         </div>
         <div className='buttons'>
