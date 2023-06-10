@@ -14,8 +14,8 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    
-    if(!search){
+
+    if (!search) {
       return
     }
 
@@ -23,7 +23,7 @@ const Navbar = () => {
     setSearch("")
   }
 
-  const handleLogout = () => {               
+  const handleLogout = () => {
     signOut(auth).then(() => {
       navigate("/");
       console.log("Signed out successfully")
@@ -33,25 +33,30 @@ const Navbar = () => {
       console.log(errorCode, errorMessage)
       alert(errorCode, errorMessage)
     });
-}
+  }
 
   return (
     <nav className='navbar'>
-      <h2>
-        <Link to="/home"><BiCameraMovie /> Flix</Link>
-      </h2>
-      <form onSubmit={handleSubmit}>
-        <button type='submit'>
-          <BiSearchAlt2 />
-        </button>
-        <input
-          type="text"
-          placeholder='Busque um filme'
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
-        />
-      </form>
-      <button onClick={handleLogout} id='logoutBtn'>Logout</button>
+      <div className="letf-btns">
+        <h2>
+          <Link to="/home"><BiCameraMovie /> Flix</Link>
+        </h2>
+        <form onSubmit={handleSubmit}>
+          <button type='submit'>
+            <BiSearchAlt2 />
+          </button>
+          <input
+            type="text"
+            placeholder='Busque um filme'
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+        </form>
+      </div>
+      <div className="right-btns">
+        <Link to="/conta">Conta</Link>
+        <button onClick={handleLogout} id='logoutBtn'>Logout</button>
+      </div>
     </nav>
   )
 }

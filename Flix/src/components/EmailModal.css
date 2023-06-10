@@ -1,0 +1,18 @@
+.email-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111111;
+  height: 360px;
+  width: 320px;
+  justify-content: center;
+}
+
+.email-modal .email-modal-inputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+  margin: 20px 0;
+}
+

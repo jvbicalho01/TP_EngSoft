@@ -7,14 +7,23 @@
   width: 100%;
 }
 
-.navbar h2 a {
+.navbar .letf-btns{
+  /* width: 28%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .letf-btns h2 a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.navbar form {
+.navbar .letf-btns form {
   display: flex;
+  /* margin-left: 1rem; */
   /* gap: 0.5rem; */
 }
 
@@ -25,7 +34,7 @@
   border: none;
 }
 
-.navbar form button{
+.navbar .letf-btns form button{
   width: fit-content;
   background-color: #f7d354;
   border: 2px solid #f7d354;
@@ -39,15 +48,31 @@
   transition: .4s;
 }
 
-.navbar form button:hover{
+.navbar .letf-btns form button:hover{
   background-color: transparent;
   color: #f7d354;
 }
 
-#logoutBtn {
+.navbar #logoutBtn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
   height: fit-content;
+  transition: .4s;
+  background-color: #f7d354;
+}
+
+.navbar .right-btns{
+  /* width: 20%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .right-btns #logoutBtn:hover{
+  background-color: transparent;
+  color: #f7d354;
+  border: 1px solid #f7d354;
 }

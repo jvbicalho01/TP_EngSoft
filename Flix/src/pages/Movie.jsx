@@ -11,7 +11,6 @@ import {
 import { FaPlay } from "react-icons/fa"
 
 import MovieCard from "../components/MovieCard"
-import Navbar from "../components/Navbar"
 
 import "./Movie.css"
 

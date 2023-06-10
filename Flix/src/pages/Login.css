@@ -24,7 +24,6 @@ a:hover button {
   color: black;
 }
 
-
 h1 {
   color: rgb(247, 237, 208);
 }
@@ -54,9 +53,6 @@ input {
   background: rgb(240, 240, 240);
 }
 
-
-
-
 button, button a {
   display: flex;
   flex-direction: row;
@@ -68,9 +64,8 @@ button, button a {
   font-size: 14px;
   background-color: white;
   color: black;
+  transition: .4s;
 }
-
-
 
 .login_inputs {
   display: flex;
