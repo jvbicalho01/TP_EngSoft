@@ -19,15 +19,15 @@ const PasswordModal = (props) => {
         <div className="password-modal-inputs">
           <form>
             <div>
-              <label htmlFor="senha-atual">Email</label>
+              <label htmlFor="senha-atual">Senha atual</label>
               <input type="password" id="senha-atual" placeholder="Minha senha" onChange={(e) => setCurrentPassword(e.target.value)} />
             </div>
             <div>
-              <label htmlFor="nova-senha">Email</label>
+              <label htmlFor="nova-senha">Nova senha</label>
               <input type="password" id="new-password" placeholder="Minha nova senha" onChange={(e) => setNewPassword(e.target.value)} />
             </div>
             <div>
-              <label htmlFor="confirma-senha">Email</label>
+              <label htmlFor="confirma-senha">Confirme sua nova senha</label>
               <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" onChange={(e) => setConfirmNewPassword(e.target.value)} />
             </div>
           </form>
