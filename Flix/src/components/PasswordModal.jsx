@@ -1,15 +1,31 @@
 import { useState } from "react"
+import { updatePassword } from "firebase/auth"
+import { auth } from '../firebase'
+
 
 import "./PasswordModal.css"
 
 const PasswordModal = (props) => {
 
-  const [currentPassword, setCurrentPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [confirmNewPassword, setConfirmNewPassword] = useState("")
 
   const cancel = () => {
     props.cancelChange()
+  }
+
+  const onPasswordUpdate = (event) => {
+    event.preventDefault()
+
+    if (newPassword === confirmNewPassword) {
+      updatePassword(auth.currentUser, newPassword)
+      .then(() => {
+        alert("Senha alterada com sucesso.")
+        props.cancelChange()
+      })
+    } else {
+      alert("As senhas não coincidem.")
+    }
   }
 
   return (
@@ -19,21 +35,17 @@ const PasswordModal = (props) => {
         <div className="password-modal-inputs">
           <form>
             <div>
-              <label htmlFor="senha-atual">Senha atual</label>
-              <input type="password" id="senha-atual" placeholder="Minha senha" onChange={(e) => setCurrentPassword(e.target.value)} />
-            </div>
-            <div>
               <label htmlFor="nova-senha">Nova senha</label>
-              <input type="password" id="new-password" placeholder="Minha nova senha" onChange={(e) => setNewPassword(e.target.value)} />
+              <input type="password" id="new-password" placeholder="Minha nova senha" onChange={(event) => setNewPassword(event.target.value)} />
             </div>
             <div>
               <label htmlFor="confirma-senha">Confirme sua nova senha</label>
-              <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" onChange={(e) => setConfirmNewPassword(e.target.value)} />
+              <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" onChange={(event) => setConfirmNewPassword(event.target.value)} />
             </div>
           </form>
         </div>
         <div className="buttons">
-          <button >Confirmar</button>
+          <button onClick={onPasswordUpdate}>Confirmar</button>
           <button onClick={cancel}>Cancelar</button>
         </div>
       </div>

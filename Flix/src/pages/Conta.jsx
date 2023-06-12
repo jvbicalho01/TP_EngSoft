@@ -55,7 +55,7 @@ const Conta = () => {
             </div>
             <div>
               <label htmlFor="senha">Senha</label>
-              <input type="password" id="senha" required placeholder='Minha senha' value={password} disabled />
+              <input type="password" id="senha" placeholder='Minha senha' value={password} disabled />
             </div>
           </form>
         </div>
