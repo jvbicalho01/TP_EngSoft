@@ -49,3 +49,8 @@
 .cadastro p a {
   text-decoration: underline;
 }
+
+.cadastro h2{
+  color: #f7d354;
+  margin-bottom: 20px;
+}

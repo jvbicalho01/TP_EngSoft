@@ -32,6 +32,7 @@ const Cadastro = () => {
     <main>
       <div className="cadastro">
         <h1>Bem vindo(a) ao Flix</h1>
+        <h2>Aproveite o primeiro mês grátis</h2>
         <div className="cadastro_inputs">
           <form>
             <div>
