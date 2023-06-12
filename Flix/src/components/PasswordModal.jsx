@@ -36,11 +36,11 @@ const PasswordModal = (props) => {
           <form>
             <div>
               <label htmlFor="nova-senha">Nova senha</label>
-              <input type="password" id="new-password" placeholder="Minha nova senha" onChange={(event) => setNewPassword(event.target.value)} />
+              <input type="password" id="new-password" required placeholder="Minha nova senha" onChange={(event) => setNewPassword(event.target.value)} />
             </div>
             <div>
               <label htmlFor="confirma-senha">Confirme sua nova senha</label>
-              <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" onChange={(event) => setConfirmNewPassword(event.target.value)} />
+              <input type="password" id="confirm-password" required placeholder="Confirme sua nova senha" onChange={(event) => setConfirmNewPassword(event.target.value)} />
             </div>
           </form>
         </div>
