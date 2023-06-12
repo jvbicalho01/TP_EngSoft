@@ -9,6 +9,8 @@ const Cadastro = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [cardNumber, setCardNumber] = useState("")
+  const [cardCVC, setCardCVC] = useState("")
 
   const onSubmit = async (event) => {
     event.preventDefault()
@@ -45,7 +47,7 @@ const Cadastro = () => {
             </div>
             <div>
               <label htmlFor="cartao-numero">Número do cartão:</label>
-              <input type="text" required placeholder='0000 0000 0000 0000' />
+              <input type="text" required placeholder='0000 0000 0000 0000' maxLength={16} value={cardNumber} onChange={(event) => setCardNumber(event.target.value)}/>
             </div>
             <div>
               <label htmlFor="validade">Validade (mês/ano):</label>
@@ -53,7 +55,7 @@ const Cadastro = () => {
             </div>
             <div>
               <label htmlFor="cod-seguranca">Código de Segurança:</label>
-              <input type="text" required placeholder='000' />
+              <input type="text" required placeholder='000' maxLength={3} onChange={(event) => setCardCVC(event.target.value)}/>
             </div>
           </form>
         </div>
