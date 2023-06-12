@@ -32,6 +32,7 @@ const Cadastro = () => {
     <main>
       <div className="cadastro">
         <h1>Bem vindo(a) ao Flix</h1>
+        <h2>Aproveite o primeiro mês grátis</h2>
         <div className="cadastro_inputs">
           <form>
             <div>
@@ -41,6 +42,18 @@ const Cadastro = () => {
             <div>
               <label htmlFor="senha">Defina uma senha:</label>
               <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required placeholder='Nova senha' />
+            </div>
+            <div>
+              <label htmlFor="cartao-numero">Número do cartão:</label>
+              <input type="text" required placeholder='0000 0000 0000 0000' />
+            </div>
+            <div>
+              <label htmlFor="validade">Validade (mês/ano):</label>
+              <input type="text" required placeholder='MM/YY' />
+            </div>
+            <div>
+              <label htmlFor="cod-seguranca">Código de Segurança:</label>
+              <input type="text" required placeholder='000' />
             </div>
           </form>
         </div>
