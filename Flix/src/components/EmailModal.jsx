@@ -31,7 +31,7 @@ const EmailModal = (props) => {
           <form>
             <div>
               <label htmlFor="endereco-email">Email</label>
-              <input type="email" id="email" placeholder="meuemail@gmail.com" onChange={(event) => setEmail(event.target.value)} />
+              <input type="email" id="email" required placeholder="meuemail@gmail.com" onChange={(event) => setEmail(event.target.value)} />
             </div>
           </form>
         </div>
