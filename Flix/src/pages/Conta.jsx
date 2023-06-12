@@ -10,13 +10,11 @@ import "./Conta.css"
 const Conta = () => {
 
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
 
   const setCurrentUser = () => {
     const currentUser = auth.currentUser
 
     setEmail(currentUser.email)
-    setPassword(currentUser.password)
   }
 
   const [displayEmailChange, setDisplayEmailChange] = useState(false)
@@ -55,7 +53,7 @@ const Conta = () => {
             </div>
             <div>
               <label htmlFor="senha">Senha</label>
-              <input type="password" id="senha" required placeholder='Minha senha' value={password} disabled />
+              <input type="password" id="senha" value="********" disabled />
             </div>
           </form>
         </div>
