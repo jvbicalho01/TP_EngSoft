@@ -11,6 +11,7 @@ import Login from './pages/Login.jsx'
 import Cadastro from './pages/Cadastro.jsx'
 import Video from './pages/Video.jsx'
 import Conta from './pages/Conta.jsx'
+import ProfileManager from './pages/ProfileManager.jsx'
 
 import './index.css'
 
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' exact element={<Login />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/movie/video/:id' element={<Video />} />
+        <Route path='/profileManager' element={<ProfileManager />} />
         <Route element={<App />}>
           <Route path='/home' element={<Home />} />
           <Route path='/movie/:id' element={<Movie />} />

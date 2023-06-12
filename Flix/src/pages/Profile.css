@@ -1,0 +1,17 @@
+.btn-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: black;
+  padding: 10px;
+}
+
+.btn-profile > div {
+  display: flex;
+  gap: 10px;
+}

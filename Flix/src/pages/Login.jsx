@@ -18,7 +18,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user
-        navigate("/home")
+        navigate("/profileManager")
         console.log(user)
       })
       .catch((error) => {
