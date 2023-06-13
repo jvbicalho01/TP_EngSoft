@@ -11,4 +11,15 @@
   flex-direction: column;
   height: 200px;
   width: fit-content;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+.profileManager > button {
+  height: 0;
+  width: 0;
+  background-color: none;
+  padding: 0;
+  margin-top: 60px;
+}
+

@@ -1,0 +1,105 @@
+.profileModal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: fit-content;
+  width: 400px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(29, 29, 29);
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: fit-content;
+  width: 100%;
+  align-items: start;
+  padding: 20px;
+}
+
+.modalBody #profileName {
+  border: 2px solid gray;
+  background-color: transparent;
+}
+
+.modalBody > div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: fit-content;
+}
+
+.modalBody p {
+  width: fit-content;
+}
+
+.modalBody > div input {
+  width: 25px;
+  border-radius: 100px;
+}
+
+
+.modalFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  column-gap: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  height: fit-content;
+  border-top: 1px solid gray;
+}
+
+.modalFooter button {
+  height: 30px;
+  width: fit-content;
+  background-color: brown;
+  padding: 7px;
+}
+
+.modalFooter .btn-cancel {
+  background-color: rgb(255, 19, 19);
+  height: fit-content;
+  width: fit-content;
+}
+
+.modalFooter .btn-add {
+  background-color: rgb(53, 255, 53);
+  height: fit-content;
+  width: fit-content;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  column-gap: 10px;
+}
+
+fieldset div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+legend {
+  font-size: 12px;
+}

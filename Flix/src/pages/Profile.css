@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  min-height: 50px;
   width: 250px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -15,3 +15,12 @@
   display: flex;
   gap: 10px;
 }
+
+.profile {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  color: black;
+}
+
