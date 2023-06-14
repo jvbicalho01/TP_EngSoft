@@ -4,6 +4,7 @@ import { auth } from '../firebase'
 
 import EmailModal from '../components/EmailModal'
 import PasswordModal from '../components/PasswordModal'
+import { useNavigate } from 'react-router-dom'
 
 import "./Conta.css"
 
@@ -41,6 +42,8 @@ const Conta = () => {
     setCurrentUser()
   },)
 
+  const navigate = useNavigate();
+
   return (
     <main>
       <div className="conta">
@@ -60,6 +63,7 @@ const Conta = () => {
         <div className="buttons">
           <button onClick={handleDisplayEmailChange}>Trocar Email</button>
           <button onClick={handleDisplayPasswordChange}>Trocar Senha</button>
+          <button onClick={() => navigate("/")}>Cancelar Assinatura</button>
         </div>
 
         {displayEmailChange ?

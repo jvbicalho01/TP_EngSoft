@@ -32,3 +32,9 @@
   height: 100%;
   width: 100%;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 10px;
+}
